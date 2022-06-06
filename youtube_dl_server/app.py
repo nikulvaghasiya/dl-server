@@ -4,8 +4,8 @@ import traceback
 import sys
 
 from flask import Flask, Blueprint, current_app, jsonify, request, redirect, abort
-import youtube_dl
-from youtube_dl.version import __version__ as youtube_dl_version
+import youtube_dll
+from youtube_dll.version import __version__ as youtube_dl_version
 
 from .version import __version__
 
@@ -15,7 +15,7 @@ if not hasattr(sys.stderr, 'isatty'):
     sys.stderr.isatty = lambda: False
 
 
-class SimpleYDL(youtube_dl.YoutubeDL):
+class SimpleYDL(youtube_dll.YoutubeDL):
     def __init__(self, *args, **kargs):
         super(SimpleYDL, self).__init__(*args, **kargs)
         self.add_default_info_extractors()
