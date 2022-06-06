@@ -15,7 +15,7 @@ if not hasattr(sys.stderr, 'isatty'):
     sys.stderr.isatty = lambda: False
 
 
-class SimpleYDL(youtube_dll.YoutubeDL):
+class SimpleYDL(youtube_dll.YoutubeDLl):
     def __init__(self, *args, **kargs):
         super(SimpleYDL, self).__init__(*args, **kargs)
         self.add_default_info_extractors()
